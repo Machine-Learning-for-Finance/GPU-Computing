@@ -57,7 +57,7 @@ int main()
 	cudaMemcpy(d_A, h_A, N*sizeof(float), cudaMemcpyHostToDevice);
 	cudaMemcpy(d_B, h_B, N*sizeof(float), cudaMemcpyHostToDevice);
 
-	addVectors<<<(N + numThreads - 1)/numThreads, numThreads>>(
+	addVectors<<<(N + numThreads - 1)/numThreads, numThreads>>>(
 		d_a,
 		d_b,
 		d_c,
